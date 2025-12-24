@@ -1,1 +1,1 @@
-# benefactor-academy
+# benefactor

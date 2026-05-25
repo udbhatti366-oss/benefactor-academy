@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Recipe Secrets",
-  description: "Recipe Secrets Website",
+  description: "Viral recipes, luxury food trends, celebrity meals and AI food tools.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        style={{
+          margin: 0,
+          fontFamily: "Arial, sans-serif",
+          background: "#0f0f0f",
+          color: "white",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

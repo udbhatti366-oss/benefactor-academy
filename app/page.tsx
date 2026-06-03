@@ -1,23 +1,8 @@
-<nav style={{
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  marginBottom: "40px"
-}}>
-  <h2>AI Creator Academy</h2>
-
-  <div style={{ display: "flex", gap: "20px" }}>
-    <Link href="/">Home</Link>
-    <Link href="/blog">Blog</Link>
-    <Link href="/ai-tools">AI Tools</Link>
-    <Link href="/resources">Resources</Link>
-    <Link href="/newsletter">Newsletter</Link>
-  </div>
-</nav>
 import Link from "next/link";
 
 export default function Home() {
   return (
+    
     <main style={styles.container}>
       {/* HERO */}
       <section style={styles.hero}>
@@ -190,6 +175,22 @@ export default function Home() {
         © {new Date().getFullYear()} AI Creator Academy.
         All rights reserved.
       </footer>
+      <nav style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "40px"
+}}>
+  <h2>AI Creator Academy</h2>
+
+  <div style={{ display: "flex", gap: "20px" }}>
+    <Link href="/">Home</Link>
+    <Link href="/blog">Blog</Link>
+    <Link href="/ai-tools">AI Tools</Link>
+    <Link href="/resources">Resources</Link>
+    <Link href="/newsletter">Newsletter</Link>
+  </div>
+</nav>
     </main>
   );
 }

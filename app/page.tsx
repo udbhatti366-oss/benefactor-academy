@@ -1,318 +1,342 @@
-export default function HomePage() {
+<nav style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "40px"
+}}>
+  <h2>AI Creator Academy</h2>
+
+  <div style={{ display: "flex", gap: "20px" }}>
+    <Link href="/">Home</Link>
+    <Link href="/blog">Blog</Link>
+    <Link href="/ai-tools">AI Tools</Link>
+    <Link href="/resources">Resources</Link>
+    <Link href="/newsletter">Newsletter</Link>
+  </div>
+</nav>
+import Link from "next/link";
+
+export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background:
-          "linear-gradient(135deg, #020617 0%, #0f172a 50%, #111827 100%)",
-        color: "white",
-        fontFamily: "Arial, sans-serif",
-        overflow: "hidden",
-      }}
-    >
-      {/* NAVBAR */}
-      <nav
-        style={{
-          width: "100%",
-          padding: "24px 80px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          position: "sticky",
-          top: 0,
-          backdropFilter: "blur(12px)",
-          background: "rgba(15,23,42,0.5)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
-          zIndex: 100,
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "30px",
-            fontWeight: "bold",
-            color: "#38bdf8",
-          }}
-        >
-          Benefactor Academy
+    <main style={styles.container}>
+      {/* HERO */}
+      <section style={styles.hero}>
+        <div style={styles.badge}>AI • Automation • Online Income</div>
+
+        <h1 style={styles.title}>
+          AI Creator Academy
         </h1>
 
-        <div style={{ display: "flex", gap: "28px", fontSize: "16px" }}>
-          <span>Home</span>
-          <span>Courses</span>
-          <span>AI Tools</span>
-          <span>Community</span>
-          <span>Contact</span>
-        </div>
-      </nav>
-
-      {/* HERO SECTION */}
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          padding: "120px 20px",
-        }}
-      >
-        <div
-          style={{
-            padding: "10px 22px",
-            borderRadius: "999px",
-            background: "rgba(56,189,248,0.12)",
-            border: "1px solid rgba(56,189,248,0.4)",
-            marginBottom: "28px",
-            color: "#7dd3fc",
-            fontWeight: "bold",
-          }}
-        >
-          #1 Premium AI Learning Platform 🚀
-        </div>
-
-        <h1
-          style={{
-            fontSize: "92px",
-            maxWidth: "1200px",
-            lineHeight: "1.05",
-            marginBottom: "30px",
-            fontWeight: 900,
-          }}
-        >
-          Build Wealth With
-          <span
-            style={{
-              background:
-                "linear-gradient(90deg,#38bdf8,#a855f7,#ec4899)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            {" "}
-            AI & Digital Skills
-          </span>
-        </h1>
-
-        <p
-          style={{
-            fontSize: "24px",
-            maxWidth: "900px",
-            color: "#cbd5e1",
-            lineHeight: "1.8",
-            marginBottom: "45px",
-          }}
-        >
-          Learn high-income skills, AI automation, e-commerce, content systems,
-          branding, marketing and modern business strategies inside one ultra
-          premium ecosystem.
+        <p style={styles.subtitle}>
+          Build Viral Content. Automate Growth. Earn Online.
         </p>
 
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          <button
-            style={{
-              padding: "18px 42px",
-              borderRadius: "14px",
-              border: "none",
-              fontSize: "18px",
-              fontWeight: "bold",
-              background:
-                "linear-gradient(90deg,#38bdf8,#0ea5e9)",
-              color: "white",
-              cursor: "pointer",
-              boxShadow: "0 10px 30px rgba(56,189,248,0.4)",
-            }}
-          >
-            Start Learning
-          </button>
+        <p style={styles.description}>
+          Learn the exact AI tools, automation systems, content workflows,
+          and digital business strategies used by modern creators to grow
+          audiences and generate income online.
+        </p>
 
-          <button
-            style={{
-              padding: "18px 42px",
-              borderRadius: "14px",
-              border: "1px solid rgba(255,255,255,0.2)",
-              fontSize: "18px",
-              fontWeight: "bold",
-              background: "transparent",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            Explore Courses
+        <div style={styles.heroButtons}>
+          <Link href="/blog">
+            <button style={styles.button}>
+              Explore Articles
+            </button>
+          </Link>
+
+          <button style={styles.secondaryButton}>
+            Join Newsletter
           </button>
         </div>
       </section>
 
       {/* STATS */}
-      <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-          gap: "24px",
-          padding: "40px 80px 120px",
-        }}
-      >
-        {[
-          ["25K+", "Students"],
-          ["150+", "Premium Lessons"],
-          ["98%", "Success Rate"],
-          ["24/7", "AI Support"],
-        ].map(([number, label]) => (
-          <div
-            key={label}
-            style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "24px",
-              padding: "40px",
-              textAlign: "center",
-              backdropFilter: "blur(12px)",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "52px",
-                marginBottom: "12px",
-                color: "#38bdf8",
-              }}
-            >
-              {number}
-            </h2>
+      <section style={styles.statsSection}>
+        <div style={styles.statCard}>
+          <h2>50K+</h2>
+          <p>Email Audience Potential</p>
+        </div>
 
-            <p style={{ color: "#cbd5e1", fontSize: "18px" }}>{label}</p>
+        <div style={styles.statCard}>
+          <h2>AI</h2>
+          <p>Automation Systems</p>
+        </div>
+
+        <div style={styles.statCard}>
+          <h2>24/7</h2>
+          <p>Content Engine</p>
+        </div>
+      </section>
+
+      {/* CATEGORIES */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Explore Categories</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.card}>
+            <h3>AI Tools</h3>
+            <p>
+              Discover powerful AI software for content creation,
+              marketing, automation and productivity.
+            </p>
           </div>
-        ))}
-      </section>
 
-      {/* FEATURES */}
-      <section
-        style={{
-          padding: "100px 80px",
-        }}
-      >
-        <div style={{ textAlign: "center", marginBottom: "70px" }}>
-          <h2
-            style={{
-              fontSize: "64px",
-              marginBottom: "20px",
-            }}
-          >
-            Everything You Need
-          </h2>
+          <div style={styles.card}>
+            <h3>Automation</h3>
+            <p>
+              Build systems that save time and scale your business.
+            </p>
+          </div>
 
-          <p
-            style={{
-              color: "#cbd5e1",
-              fontSize: "22px",
-            }}
-          >
-            One platform. Unlimited growth.
-          </p>
-        </div>
+          <div style={styles.card}>
+            <h3>Content Creation</h3>
+            <p>
+              Learn viral content strategies for YouTube,
+              TikTok, Pinterest and blogs.
+            </p>
+          </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "28px",
-          }}
-        >
-          {[
-            "AI Automation",
-            "E-Commerce Systems",
-            "Premium Community",
-            "Mentorship Access",
-            "Business Blueprints",
-            "Viral Marketing",
-          ].map((feature) => (
-            <div
-              key={feature}
-              style={{
-                padding: "40px",
-                borderRadius: "24px",
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "30px",
-                  marginBottom: "18px",
-                  color: "#38bdf8",
-                }}
-              >
-                {feature}
-              </h3>
-
-              <p
-                style={{
-                  color: "#cbd5e1",
-                  lineHeight: "1.8",
-                  fontSize: "17px",
-                }}
-              >
-                Master modern systems and build scalable online income with
-                cutting-edge AI tools and strategies.
-              </p>
-            </div>
-          ))}
+          <div style={styles.card}>
+            <h3>Online Income</h3>
+            <p>
+              Explore practical digital income opportunities
+              and creator business models.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section
-        style={{
-          padding: "120px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "72px",
-            marginBottom: "24px",
-          }}
-        >
-          Ready To Level Up?
-        </h2>
+      {/* WHAT YOU LEARN */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>What You Will Learn</h2>
 
-        <p
-          style={{
-            fontSize: "24px",
-            color: "#cbd5e1",
-            marginBottom: "40px",
-          }}
-        >
-          Join Benefactor Academy today and transform your future.
+        <ul style={styles.list}>
+          <li>How to create viral content using AI</li>
+          <li>How creators monetize online audiences</li>
+          <li>How to automate content workflows</li>
+          <li>Faceless YouTube strategies</li>
+          <li>Pinterest growth systems</li>
+          <li>AI-powered blogging</li>
+          <li>Digital products & affiliate income</li>
+          <li>Creator business automation</li>
+        </ul>
+      </section>
+
+      {/* ARTICLES */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Latest Articles</h2>
+
+        <div style={styles.grid}>
+          <Link href="/blog/ai-side-hustles-2026" style={styles.linkCard}>
+            <h3>Best AI Side Hustles in 2026</h3>
+            <p>Explore scalable AI income opportunities.</p>
+          </Link>
+
+          <Link href="/blog/top-ai-tools-for-creators" style={styles.linkCard}>
+            <h3>Top AI Tools for Creators</h3>
+            <p>Discover the most useful creator tools.</p>
+          </Link>
+
+          <Link href="/blog/automation-business-systems" style={styles.linkCard}>
+            <h3>Automation Business Systems</h3>
+            <p>Scale your output using automation.</p>
+          </Link>
+        </div>
+
+        <div style={{ marginTop: "30px" }}>
+          <Link href="/blog">
+            <button style={styles.button}>
+              View All Articles
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* MISSION */}
+      <section style={styles.section}>
+        <h2 style={styles.heading}>Our Mission</h2>
+
+        <p style={styles.description}>
+          AI Creator Academy exists to help creators, freelancers,
+          entrepreneurs and beginners leverage artificial intelligence,
+          automation and content systems to build sustainable online income.
+        </p>
+      </section>
+
+      {/* NEWSLETTER */}
+      <section style={styles.email}>
+        <h2>Join The AI Creator Newsletter</h2>
+
+        <p>
+          Get AI tools, automation systems, growth strategies,
+          content ideas and online income opportunities delivered weekly.
         </p>
 
-        <button
-          style={{
-            padding: "20px 52px",
-            borderRadius: "18px",
-            border: "none",
-            background:
-              "linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899)",
-            color: "white",
-            fontSize: "22px",
-            fontWeight: "bold",
-            cursor: "pointer",
-            boxShadow: "0 15px 40px rgba(139,92,246,0.45)",
-          }}
-        >
-          Join Now 🚀
-        </button>
+        <div style={styles.newsletterBox}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            style={styles.input}
+          />
+
+          <button style={styles.button}>
+            Subscribe
+          </button>
+        </div>
       </section>
 
       {/* FOOTER */}
-      <footer
-        style={{
-          padding: "40px",
-          textAlign: "center",
-          borderTop: "1px solid rgba(255,255,255,0.08)",
-          color: "#94a3b8",
-        }}
-      >
-        © 2026 Benefactor Academy — All Rights Reserved.
+      <footer style={styles.footer}>
+        © {new Date().getFullYear()} AI Creator Academy.
+        All rights reserved.
       </footer>
     </main>
   );
 }
+
+const styles: any = {
+  container: {
+    backgroundColor: "#09090b",
+    color: "white",
+    minHeight: "100vh",
+    padding: "40px",
+    fontFamily: "Arial, sans-serif",
+  },
+
+  hero: {
+    textAlign: "center",
+    padding: "80px 20px",
+    maxWidth: "900px",
+    margin: "0 auto",
+  },
+
+  badge: {
+    display: "inline-block",
+    background: "#1f1f25",
+    padding: "8px 16px",
+    borderRadius: "999px",
+    color: "#cfcfcf",
+    marginBottom: "20px",
+    fontSize: "14px",
+  },
+
+  title: {
+    fontSize: "64px",
+    fontWeight: "bold",
+    marginBottom: "20px",
+  },
+
+  subtitle: {
+    fontSize: "28px",
+    color: "#a1a1aa",
+  },
+
+  description: {
+    maxWidth: "700px",
+    margin: "20px auto",
+    color: "#d4d4d8",
+    lineHeight: "1.8",
+  },
+
+  heroButtons: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "15px",
+    marginTop: "30px",
+    flexWrap: "wrap",
+  },
+
+  button: {
+    backgroundColor: "#7c3aed",
+    color: "white",
+    border: "none",
+    padding: "14px 22px",
+    borderRadius: "10px",
+    cursor: "pointer",
+    fontWeight: "bold",
+  },
+
+  secondaryButton: {
+    backgroundColor: "#1f1f25",
+    color: "white",
+    border: "1px solid #333",
+    padding: "14px 22px",
+    borderRadius: "10px",
+    cursor: "pointer",
+  },
+
+  statsSection: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+    gap: "20px",
+    marginTop: "40px",
+    marginBottom: "80px",
+  },
+
+  statCard: {
+    backgroundColor: "#111114",
+    padding: "25px",
+    borderRadius: "16px",
+    textAlign: "center",
+  },
+
+  section: {
+    maxWidth: "1100px",
+    margin: "80px auto",
+  },
+
+  heading: {
+    marginBottom: "30px",
+    fontSize: "32px",
+  },
+
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+    gap: "20px",
+  },
+
+  card: {
+    backgroundColor: "#111114",
+    padding: "25px",
+    borderRadius: "16px",
+  },
+
+  linkCard: {
+    backgroundColor: "#111114",
+    padding: "25px",
+    borderRadius: "16px",
+    color: "white",
+    textDecoration: "none",
+    display: "block",
+  },
+
+  list: {
+    lineHeight: "2",
+    color: "#d4d4d8",
+  },
+
+  email: {
+    textAlign: "center",
+    marginTop: "100px",
+  },
+
+  newsletterBox: {
+    marginTop: "20px",
+  },
+
+  input: {
+    padding: "14px",
+    width: "300px",
+    maxWidth: "90%",
+    borderRadius: "10px",
+    border: "none",
+    marginRight: "10px",
+  },
+
+  footer: {
+    marginTop: "100px",
+    textAlign: "center",
+    color: "#71717a",
+  },
+};
